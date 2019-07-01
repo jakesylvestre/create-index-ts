@@ -4,7 +4,8 @@
 [![Travis build status](http://img.shields.io/travis/gajus/create-index/master.svg?style=flat-square)](https://travis-ci.org/gajus/create-index)
 [![js-canonical-style](https://img.shields.io/badge/code%20style-canonical-blue.svg?style=flat-square)](https://github.com/gajus/canonical)
 
-`create-index` program creates (and maintains) ES6 `./index.js` file in target directories that imports and exports sibling files and directories.
+`create-index-normalized` program creates (and maintains) ES6 `./index.js` file in target directories that imports and exports sibling files and directories.
+This forked version of [`create-index`](https://github.com/gajus/create-index) normalizes filenames with dashes since exports cannot have dashes (see [#8](https://github.com/gajus/create-index/issues/8))
 
 ## Example
 

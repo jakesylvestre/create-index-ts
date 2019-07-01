@@ -4,9 +4,9 @@ const safeVariableName = (fileName) => {
   const indexOfDot = fileName.indexOf('.');
 
   if (indexOfDot === -1) {
-    return fileName;
+    return _.camelCase(fileName);
   } else {
-    return fileName.slice(0, indexOfDot);
+    return _.camelCase(fileName.slice(0, indexOfDot));
   }
 };
 
