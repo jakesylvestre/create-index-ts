@@ -1,20 +1,10 @@
 import _ from 'lodash';
 
-const safeVariableName = (fileName) => {
-  const indexOfDot = fileName.indexOf('.');
-
-  if (indexOfDot === -1) {
-    return _.camelCase(fileName);
-  } else {
-    return _.camelCase(fileName.slice(0, indexOfDot));
-  }
-};
-
 const buildExportBlock = (files) => {
   let importBlock;
 
   importBlock = _.map(files, (fileName) => {
-    return 'export { default as ' + safeVariableName(fileName) + ' } from \'./' + fileName + '\';';
+    return 'export * from \'./' + fileName + '\';';
   });
 
   importBlock = importBlock.join('\n');
